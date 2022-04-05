@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&family=Rubik+Glitch&family=Source+Sans+Pro:wght@200;400&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        min-width: 300px;
+        text-align: center;
+    }
+    h1{
+        font-family: 'Rubik Glitch', cursive;
+    }
+    .purple{
+        color:#170B3B ;
+    }
+    .yellow{
+        color: #FFBF00;
+    }
+    p, .button{
+        font-family: 'Lato', sans-serif;
+        font-size:1rem;
+    }
+    .button{
+        background-color: #FFFF8F;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height:2rem;
+        width: 4.5rem;
+        border-radius:1rem;
+        /*animation: Backgroundyellow 1s infinite ;*/
+        cursor: pointer;
+    }
+    .row{
+        padding:0 0.25rem ;
+        pointer-events: none;
+    }
+    .circle{
+        position: absolute;
+        top:0;
+        left:0;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        background-color: #FFBF00;
+        /*animation: moveCircleRight 1s infinite ;*/
+        pointer-events: none;
+    }
+    /*animations*/
+    @keyframes moveCircleRight{
+        from{
+            left:0%;
+            background-color:#FFBF00;
+        }
+        to{
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: #FFFF8F;
+        }
+    }
+    @keyframes moveCircleLeft{
+        from{
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: #FFFF8F;
+        }
+        to{
+            left:0%;
+            background-color:#FFBF00;
+        }
+    }
+@keyframes Backgroundyellow{
+    from{
+        background-color:#FFBF00 ;
+    }
+    to{
+        background-color: #FFFF8F;
+    }
+
+}
+@keyframes BackgroundYellow{
+    from{
+        background-color:#FFFF8F;
+    }
+    to{
+        background-color:#FFBF00 ;
+    }
+}
+
+</style>
+<body class="popup">
+      <h1><span class="purple">Light </span><span class="yellow"> Switch </span></h1> 
+      <p>Meet invert.io a chrom extansion that can turn on light mode or dark mode</p>
+         <div class="button">
+             <div class="row">On</div>
+             <div class="row">Off</div>
+             <div class="circle"></div>
+
+         </div>
+</body>
+<script src="popup.js"></script>
+</html>
